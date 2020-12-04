@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="./phaser.3.24.1.min.js"></script>
+    <script src="./sandbox.js"></script>
+    <script>
+
+      var gameScenes =
+      [
+        sandbox.ExampleMainMenuScene
+      ];
+
+      sandbox.GameManager.startGame(
+        null,
+        null,
+        gameScenes);
+
+      // We can override the Phaser config like:
+      // sandbox.GameManager.startGame(null,
+      //   {
+      //     scale: {
+      //     mode: Phaser.Scale.FIT,
+      //     autoCenter: Phaser.Scale.CENTER_BOTH,
+      //     width: 1366, // 1366, 768, 360 // most common resolutions: desktop, tablet, mobile
+      //     height: 768 // 768 1024 640
+      //     }
+      // })
+
+
+    </script>
+
+    <style>
+      body{margin:0}
+    </style>
+
+  </head>
+  <body>
+    <div id="phaser3"></div>
+  </body>
+</html>
