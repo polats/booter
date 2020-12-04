@@ -3,4 +3,4 @@
 
 # Directory structure
 
-website: deployed to github pages
+docs: deployed to github pages
