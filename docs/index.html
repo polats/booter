@@ -1,22 +1,22 @@
 <!doctype html>
 <html>
   <head>
-    <script src="./phaser.3.24.1.min.js"></script>
-    <script src="./sandbox.js"></script>
+    <script src="./lib/phaser.3.24.1.min.js"></script>
+    <script src="./lib/booter.js"></script>
     <script>
 
       var gameScenes =
       [
-        sandbox.ExampleMainMenuScene
+        booter.ExampleMainMenuScene
       ];
 
-      sandbox.GameManager.startGame(
+      booter.GameManager.startGame(
         null,
         null,
         gameScenes);
 
       // We can override the Phaser config like:
-      // sandbox.GameManager.startGame(null,
+      // booter.GameManager.startGame(null,
       //   {
       //     scale: {
       //     mode: Phaser.Scale.FIT,
