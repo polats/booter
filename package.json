@@ -14,7 +14,6 @@
     "dist/index.js"
   ],
   "scripts": {
-    "postinstall": "node ./.setup.js",
     "serve": "serve docs",
     "dev": "concurrently --kill-others-on-fail \"webpack --watch\" \"npm run serve\"",
     "build": "webpack",
