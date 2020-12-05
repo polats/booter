@@ -1,5 +1,9 @@
 const path = require('path');
 
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
+var htmlReplaceConfig = require('./conf/html-replace')
+
 
 /* ---------------
  * Main config
@@ -43,9 +47,30 @@ var configDocs = Object.assign({}, config, {
         library: 'booter',
         libraryTarget: 'umd',
         umdNamedDefine: true,
-        filename: 'booter.js',
-        path: path.resolve(__dirname, 'docs/lib'),
-    }
+        filename: 'lib/booter.js',
+        path: path.resolve(__dirname, 'docs'),
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Foo',
+            filename: 'index.html',
+            template: 'src/template.index.html',
+            inject: false,
+            minify: false,
+            chunks: 'all',
+            chunksSortMode: 'auto'
+          }),
+          new HtmlWebpackPlugin({
+            title: 'Foo',
+            filename: 'booter.webmanifest',
+            template: 'src/template.webmanifest',
+            inject: false,
+            minify: false,
+            chunks: 'all',
+            chunksSortMode: 'auto'
+          }),
+          new HtmlReplaceWebpackPlugin(htmlReplaceConfig)
+    ]
 });
 
 
