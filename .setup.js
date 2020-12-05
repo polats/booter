@@ -2,8 +2,8 @@
 const execSync = require('child_process').execSync
 
 console.log(`============================================================`)
-console.log(`Initializing game package info via npm init.`);
-console.log(`Please choose your own unique package name for publish to work.`)
+console.log(`Thank you for using Booter!`);
+console.log(`Please choose your own unique package name for Booter to work.`)
 console.log(`=============================================================`)
 
 let exitCode = 0;
