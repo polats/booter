@@ -4,7 +4,7 @@ if(enablePWA) {
     // SERVICE WORKER
     
 	if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./js/sw.js').then(function(reg) {
+        navigator.serviceWorker.register('./sw.js').then(function(reg) {
             console.log('Successfully registered service worker', reg);
         }).catch(function(err) {
             console.warn('Error whilst registering service worker', err);
