@@ -52,7 +52,6 @@ var configDocs = Object.assign({}, config, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Foo',
             filename: 'index.html',
             template: 'src/template.index.html',
             inject: false,
@@ -61,7 +60,6 @@ var configDocs = Object.assign({}, config, {
             chunksSortMode: 'auto'
           }),
           new HtmlWebpackPlugin({
-            title: 'Foo',
             filename: 'booter.webmanifest',
             template: 'src/template.webmanifest',
             inject: false,
